@@ -1,4 +1,3 @@
-
 const colorEstado = {
   r: 255,
   g: 255,
@@ -11,8 +10,7 @@ const misBotones = [
   document.getElementById("btn-blue")
 ];
 
-
-misBotones[1].onclick = () => {
+misBotones[1].addEventListener("click", () => {
   colorEstado.g = Math.floor(Math.random() * 256);
 
   console.log("VERDE:", colorEstado);
@@ -22,10 +20,9 @@ misBotones[1].onclick = () => {
 
   document.getElementById("color-text").textContent =
     "rgb(" + colorEstado.r + "," + colorEstado.g + "," + colorEstado.b + ")";
-};
+});
 
-
-misBotones[2].onclick = () => {
+misBotones[2].addEventListener("click", () => {
   colorEstado.b = Math.floor(Math.random() * 256);
 
   console.log("AZUL:", colorEstado);
@@ -35,4 +32,4 @@ misBotones[2].onclick = () => {
 
   document.getElementById("color-text").textContent =
     "rgb(" + colorEstado.r + "," + colorEstado.g + "," + colorEstado.b + ")";
-};
+});
